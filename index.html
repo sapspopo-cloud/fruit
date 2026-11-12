@@ -18,6 +18,7 @@
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", sans-serif;
       background-color: var(--bg-color);
@@ -122,6 +123,7 @@
       margin-bottom: 30px;
       border: 1px solid var(--border-color);
       box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+      scroll-margin-top: 80px;
     }
 
     h2.section-title {
@@ -192,7 +194,6 @@
       border-color: #90caf9;
     }
 
-    /* 字卡圖鑑網格 */
     .filter-bar {
       display: flex;
       flex-wrap: wrap;
@@ -268,7 +269,6 @@
       font-family: "Segoe UI", Arial, sans-serif;
     }
 
-    /* 牌卡底色分類對應 */
     .bg-brown { background-color: #a68250; }
     .bg-green { background-color: #558b2f; }
     .bg-coral { background-color: #e57373; }
@@ -291,7 +291,6 @@
     th { background: #e8f5e9; color: var(--secondary-color); font-weight: bold; }
     tr:nth-child(even) { background-color: #f9fbf9; }
 
-    /* 數位計分板 */
     .score-board {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -355,7 +354,7 @@
   <div class="main-wrapper">
     <div class="top-bar">
       <button class="mobile-toggle" onclick="toggleSidebar()">☰ 目錄</button>
-      <div style="font-weight: bold; color: var(--primary-color);">策馬學語－教學策略實務分享｜在地食百二</div>
+      <div style="font-weight: bold; color: var(--primary-color);">教學策略實務分享｜在地食百二</div>
       <div class="controls">
         <button onclick="changeFontSize(0.1)">A+</button>
         <button onclick="changeFontSize(-0.1)">A-</button>
@@ -367,4 +366,298 @@
       
       <div class="banner-card">
         <h1>在地食百二《那弈那學：用桌遊玩中學在地蔬菜與水果》</h1>
-        <div class="pinyin-sub">tsāi-tuē tsiah
+        <div class="pinyin-sub">tsāi-tuē tsiah-pah-lī ｜ 金門話本土語文桌遊教學</div>
+        <p>桌遊設計：薛奕龍（金門縣古城國民小學）</p>
+      </div>
+
+      <!-- 單元基本資訊與設計理念 -->
+      <section id="overview">
+        <h2 class="section-title">單元基本資訊與設計理念</h2>
+        
+        <div class="info-grid">
+          <div class="info-box">
+            <strong>📚 課程基本資料</strong>
+            • 單元名稱：在地食百二<br>
+            • 授課年級：中年級<br>
+            • 授課科別：本土語文（金門話）<br>
+            • 授課節數：2節課
+          </div>
+          <div class="info-box">
+            <strong>🎯 教學核心策略</strong>
+            • 選用概念：遊戲教學法<br>
+            • 策略名稱：那弈那學：用桌遊玩中學在地蔬菜與水果<br>
+            • 教具資源：自編桌遊紙卡與遊戲圖紙（底圖一、底圖二）
+          </div>
+        </div>
+
+        <h3 class="sub-title">● 作品設計理念與概述</h3>
+        <p style="margin-bottom: 12px;">本作品以金門本土語文教學為核心，結合「遊戲化學習」與「生活情境應用」理念，設計出兼具趣味性、互動性與語言實用性的桌遊教材。以學生熟悉的在地蔬果為主題，將金門常見果蔬及其金門話語詞融入卡牌與遊戲圖版之中，希望透過「邊玩邊學」的方式，降低學生學習本土語言的距離感，提升開口說母語的意願。</p>
+        <p style="margin-bottom: 12px;">設計理念源自於觀察學生在傳統語詞背誦教學中，易出現記憶短暫、缺乏使用情境，以及學習動機不足等問題。因此，採用桌遊作為媒介，將語文學習轉化為具有挑戰性與合作性的遊戲歷程。在遊戲中必須快速辨識圖像、說出語詞、進行句型延伸與互動搶答，能反覆練習詞彙。透過同儕互動與競賽機制，學生能在高參與度與高投入感中，建立對本土語文的自信與成就感。</p>
+        <p>此外，重視學習的「循序漸進」。從基礎語詞開始，逐步進展至形容詞、量詞句型與造句練習，逐漸深化學習內容。同時，結合拼音學習與棋盤闖關玩法，使學生能在操作與移動過程中反覆接觸，提升拼音與發音能力。「菜籃」與「冰箱」特殊牌，更增添策略性與趣味性，使語文課程充滿思考與歡樂的學習體驗。希望孩子不只是「學會語言」，更能在互動中，自然建立對土地文化的認同感，讓本土語言真正回到生活之中。</p>
+      </section>
+
+      <!-- 教學策略與單元目標 -->
+      <section id="strategy">
+        <h2 class="section-title">教學策略與單元目標</h2>
+        
+        <table>
+          <thead>
+            <tr><th style="width: 22%;">項目</th><th>具體內容說明</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>單元目標<br>（知識／技能／態度）</strong></td>
+              <td>
+                <strong>總目標：</strong>能認識在地的蔬果並且用金門話說出其名稱。<br>
+                <strong>1. 知識：</strong>能說出正確的蔬果名稱。<br>
+                <strong>2. 技能：</strong>能依照桌遊方式進行遊戲與對話。<br>
+                <strong>3. 態度：</strong>能積極參與課程，並運用於生活對話之中。
+              </td>
+            </tr>
+            <tr>
+              <td><strong>策略選用原因</strong></td>
+              <td>使用自編的桌遊教材，延伸課文學習的蔬果主題，增加學生對於在地蔬果的認識，並能使用金門話說出正確的名詞，在遊戲中強化語音的使用。</td>
+            </tr>
+            <tr>
+              <td><strong>教學內容簡介</strong></td>
+              <td>認識地方蔬菜水果、跟念老師一起念、在遊戲互動中學習，並結合圖紙增加趣味性。</td>
+            </tr>
+            <tr>
+              <td><strong>課堂觀察與回饋</strong></td>
+              <td>
+                • 學生投入程度：♥♥♥♥♥（純卡片喊牌遊戲高度投入與熱血）<br>
+                • 學生探究深度：★★★★☆
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- 教學實踐進行步驟 -->
+      <section id="steps">
+        <h2 class="section-title">教學實踐進行步驟</h2>
+
+        <div class="game-card">
+          <h4>階段一：目標蔬果語詞教學與節奏接力遊戲</h4>
+          <p>先進行目標蔬果語詞帶念教學（詳見下方字卡圖鑑），並搭配節奏遊戲：<br>
+          全班一起打節拍念出口訣：<strong>「若是想到在地，我會想著（　　）」</strong>，小朋友挑出一張牌，舉牌大聲說出牌中的蔬果名稱，全班輪流接力。</p>
+        </div>
+
+        <div class="game-card">
+          <h4>階段二：純卡牌遊戲（心臟病喊牌玩法）</h4>
+          <p><strong>遊戲設置與基本規則：</strong></p>
+          <ol style="margin-left: 20px; margin-bottom: 12px;">
+            <li><strong>猜拳決定順序：</strong>四人一組，每人發 13張牌，牌拿在手上不看牌。猜拳贏的人先出牌，依順時針方向進行。</li>
+            <li><strong>翻牌與疊牌：</strong>輪流打開一張牌放在自己桌上當「桌牌」。次一輪翻出的桌牌要疊在前一輪的桌牌上。</li>
+            <li><strong>同色喊牌得分：</strong>當桌面上有和自己桌牌<strong>底色相同</strong>的牌時，要快速喊出對方牌面上的水果或蔬菜名稱。先喊出來的可以拿回對方的卡片放在自己旁邊視為得分（每張 1分）。</li>
+            <li><strong>連續喊牌機制：</strong>當有人贏走桌牌時，原本壓在底下的牌會現出，若顏色再次相同，可繼續連續喊牌！持續進行到所有牌都翻完，分數高者獲勝。</li>
+          </ol>
+
+          <div class="special-card-box">
+            <div class="special-item">
+              <strong>🧺 特殊牌：菜籃（tshài-nâ）</strong><br>
+              翻出「菜籃」時，可以直接收回對方桌面上的一張牌，放在自己旁邊視為得分。
+            </div>
+            <div class="special-item fridge">
+              <strong>🧊 特殊牌：冰箱（ping-siunn）</strong><br>
+              翻出「冰箱」時，可以拿走別人桌面上的一張牌當作自己的桌牌，提高後續同色配對的機率！
+            </div>
+          </div>
+
+          <h4 style="margin-top: 18px; color: var(--accent-color);">📈 語言輸出四階段難度遞進（鷹架設計）</h4>
+          <ul style="margin-left: 20px; line-height: 1.8;">
+            <li><span class="step-badge">第一次</span><strong>基礎語詞：</strong>喊出蔬果名稱即可（例如：<strong>蘋果</strong>）。</li>
+            <li><span class="step-badge">第二次</span><strong>加上形容詞：</strong>描繪蔬果特徵（例如：<strong>紅紅的蘋果</strong>）。</li>
+            <li><span class="step-badge">第三次</span><strong>加上形容詞＋量詞：</strong>精準表達數量（例如：<strong>一顆紅紅的蘋果</strong>）。</li>
+            <li><span class="step-badge">第四次</span><strong>指定句型或完整造句：</strong>融入生活情境對話（例如：<strong>我要買一顆紅紅的蘋果。</strong>），逐步精熟金門話的使用。</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 遊戲底圖進階玩法 -->
+      <section id="boardgames">
+        <h2 class="section-title">搭配遊戲底圖進階玩法</h2>
+
+        <div class="game-card">
+          <h4>玩法一：搭配「遊戲底圖一」學拼音（學習聲母與金門獨有母音 ir、er）</h4>
+          <p><strong>遊戲準備：</strong>圖板外圍為聲母與韻母格，中央放置蔬果圖卡。四個角落的箭頭都可以是出發點，遊戲者選擇代表物（不同顏色的棋子或花片），擲骰子前進。</p>
+          <ul style="margin-left: 20px; margin-top: 8px; line-height: 1.8;">
+            <li><strong>初階玩法（認讀聲母拼音）：</strong>停留在格子上的聲母時，從中央找出含有該聲母拼音的卡牌（例如停在 <code>th</code> → 念出「ㄊ、ㄊ、ㄊ — 桃 <code>thô</code>」），念對即可拿回卡片得 1分，玩到沒有卡片結束。</li>
+            <li><strong>進階玩法（造句挑戰）：</strong>拿回卡片後放回格子上，下一個走到該格的人必須說出完整句子，才能拿回卡片得分。</li>
+            <li><strong>複雜玩法（兌換道具卡重複練習）：</strong>拿到 5張卡片可以兌換成「菜籃」並將卡片放回中央；拿到 10張卡片可以兌換成「冰箱」，讓全組可以重複練習更多次。</li>
+          </ul>
+        </div>
+
+        <div class="game-card">
+          <h4>玩法二：搭配「遊戲底圖二」學語詞（溜滑梯與爬樓梯大富翁）</h4>
+          <p><strong>遊戲規則：</strong></p>
+          <ol style="margin-left: 20px; margin-top: 8px; line-height: 1.8;">
+            <li>先把對應的蔬果圖卡放在圖紙格子上。</li>
+            <li>遊戲者由下方的出發點開始，選擇代表物並擲骰子前進（途中遇樓梯可往上爬、遇溜滑梯會滑落，增加趣味性）。</li>
+            <li>遊戲者要在停留的格子上說出正確的金門話語詞，說對即可拿走該格卡片。</li>
+            <li>當有玩家率先抵達終點時遊戲結束，<strong>最先抵達終點者額外加 3分</strong>，加上手上獲得的卡片（每張 1分），總分最高者獲勝。</li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- 在地蔬果字卡圖鑑 -->
+      <section id="cards">
+        <h2 class="section-title">在地蔬果與特殊字卡圖鑑（共52張）</h2>
+        <p style="margin-bottom: 15px;">完整收錄本套桌遊 48 張水果與蔬菜字卡（依牌面底色分組）及 4 張特殊功能牌，可輸入漢字或拼音即時搜尋：</p>
+
+        <div class="filter-bar">
+          <input type="text" id="vocabSearch" class="search-box" placeholder="🔍 輸入漢字或金門話拼音搜尋（例如：弓蕉、kue、tshài）..." onkeyup="filterCards()">
+          <button class="filter-btn active" onclick="setCategory('all', this)">全部 (52)</button>
+          <button class="filter-btn" onclick="setCategory('fruit', this)">水果類 (16)</button>
+          <button class="filter-btn" onclick="setCategory('veg', this)">蔬菜類 (32)</button>
+          <button class="filter-btn" onclick="setCategory('special', this)">特殊牌 (4)</button>
+        </div>
+
+        <div class="vocab-grid" id="vocabGrid">
+          <div class="vocab-card bg-brown" data-cat="fruit"><span class="vocab-tag">水果</span><div class="vocab-hanzi">蘋果</div><div class="vocab-pinyin">phîng-kó</div></div>
+          <div class="vocab-card bg-brown" data-cat="fruit"><span class="vocab-tag">水果</span><div class="vocab-hanzi">弓蕉</div><div class="vocab-pinyin">king-tsio</div></div>
+          <div class="vocab-card bg-brown" data-cat="fruit"><span class="vocab-tag">水果</span><div class="vocab-hanzi">柑</div><div class="vocab-pinyin">kam</div></div>
+          <div class="vocab-card bg-brown" data-cat="fruit"><span class="vocab-tag">水果</span><div class="vocab-hanzi">林仔菝</div><div class="vocab-pinyin">nâi-á-pút</div></div>
+          <div class="vocab-card bg-brown" data-cat="fruit"><span class="vocab-tag">水果</span><div class="vocab-hanzi">檨仔（芒果）</div><div class="vocab-pinyin">suāinn-á</div></div>
+          <div class="vocab-card bg-brown" data-cat="fruit"><span class="vocab-tag">水果</span><div class="vocab-hanzi">葡萄</div><div class="vocab-pinyin">phû-tô</div></div>
+          <div class="vocab-card bg-brown" data-cat="fruit"><span class="vocab-tag">水果</span><div class="vocab-hanzi">王梨</div><div class="vocab-pinyin">ông-lâi</div></div>
+          <div class="vocab-card bg-brown" data-cat="fruit"><span class="vocab-tag">水果</span><div class="vocab-hanzi">西瓜</div><div class="vocab-pinyin">si-kue</div></div>
+
+          <div class="vocab-card bg-green" data-cat="fruit"><span class="vocab-tag">水果</span><div class="vocab-hanzi">蓮霧</div><div class="vocab-pinyin">lián-bū</div></div>
+          <div class="vocab-card bg-green" data-cat="fruit"><span class="vocab-tag">水果</span><div class="vocab-hanzi">紅柿</div><div class="vocab-pinyin">âng-khī</div></div>
+          <div class="vocab-card bg-green" data-cat="fruit"><span class="vocab-tag">水果</span><div class="vocab-hanzi">草莓</div><div class="vocab-pinyin">tsháu-m̂</div></div>
+          <div class="vocab-card bg-green" data-cat="fruit"><span class="vocab-tag">水果</span><div class="vocab-hanzi">桃仔</div><div class="vocab-pinyin">thô-á</div></div>
+          <div class="vocab-card bg-green" data-cat="fruit"><span class="vocab-tag">水果</span><div class="vocab-hanzi">荔枝</div><div class="vocab-pinyin">nāi-tsi</div></div>
+          <div class="vocab-card bg-green" data-cat="fruit"><span class="vocab-tag">水果</span><div class="vocab-hanzi">木瓜</div><div class="vocab-pinyin">bo̍k-kue</div></div>
+          <div class="vocab-card bg-green" data-cat="fruit"><span class="vocab-tag">水果</span><div class="vocab-hanzi">楊桃</div><div class="vocab-pinyin">iûnn-tôr</div></div>
+          <div class="vocab-card bg-green" data-cat="fruit"><span class="vocab-tag">水果</span><div class="vocab-hanzi">龍眼</div><div class="vocab-pinyin">gîng-ngái</div></div>
+
+          <div class="vocab-card bg-coral" data-cat="veg"><span class="vocab-tag">蔬菜</span><div class="vocab-hanzi">蕳砃（干冬）</div><div class="vocab-pinyin">kan-tan</div></div>
+          <div class="vocab-card bg-coral" data-cat="veg"><span class="vocab-tag">蔬菜</span><div class="vocab-hanzi">香菇</div><div class="vocab-pinyin">hiunn-koo</div></div>
+          <div class="vocab-card bg-coral" data-cat="veg"><span class="vocab-tag">蔬菜</span><div class="vocab-hanzi">臭柿仔</div><div class="vocab-pinyin">tshàu-khī-á</div></div>
+          <div class="vocab-card bg-coral" data-cat="veg"><span class="vocab-tag">蔬菜</span><div class="vocab-hanzi">高麗菜</div><div class="vocab-pinyin">ko-lê-tshài</div></div>
+          <div class="vocab-card bg-coral" data-cat="veg"><span class="vocab-tag">蔬菜</span><div class="vocab-hanzi">菜花</div><div class="vocab-pinyin">tshài-hue</div></div>
+          <div class="vocab-card bg-coral" data-cat="veg"><span class="vocab-tag">蔬菜</span><div class="vocab-hanzi">蔥</div><div class="vocab-pinyin">tshang</div></div>
+          <div class="vocab-card bg-coral" data-cat="veg"><span class="vocab-tag">蔬菜</span><div class="vocab-hanzi">包果（包裹）</div><div class="vocab-pinyin">pau-kó</div></div>
+          <div class="vocab-card bg-coral" data-cat="veg"><span class="vocab-tag">蔬菜</span><div class="vocab-hanzi">望蓋蔥（網甲蔥）</div><div class="vocab-pinyin">bāng kài tshang</div></div>
+
+          <div class="vocab-card bg-gray" data-cat="veg"><span class="vocab-tag">蔬菜</span><div class="vocab-hanzi">蘆筍</div><div class="vocab-pinyin">lôo-sún</div></div>
+          <div class="vocab-card bg-gray" data-cat="veg"><span class="vocab-tag">蔬菜</span><div class="vocab-hanzi">金針菇</div><div class="vocab-pinyin">kim-tsiam-koo</div></div>
+          <div class="vocab-card bg-gray" data-cat="veg"><span class="vocab-tag">蔬菜</span><div class="vocab-hanzi">竹筍</div><div class="vocab-pinyin">tik-sún</div></div>
+          <div class="vocab-card bg-gray" data-cat="veg"><span class="vocab-tag">蔬菜</span><div class="vocab-hanzi">白菜</div><div class="vocab-pinyin">pe̍h-tshài</div></div>
+          <div class="vocab-card bg-gray" data-cat="veg"><span class="vocab-tag">蔬菜</span><div class="vocab-hanzi">紅菜頭</div><div class="vocab-pinyin">âng-tshài-thâu</div></div>
+          <div class="vocab-card bg-gray" data-cat="veg"><span class="vocab-tag">蔬菜</span><div class="vocab-hanzi">蘑菇</div><div class="vocab-pinyin">môo-koo</div></div>
+          <div class="vocab-card bg-gray" data-cat="veg"><span class="vocab-tag">蔬菜</span><div class="vocab-hanzi">青菜花</div><div class="vocab-pinyin">tshinn-tshài-hue</div></div>
+          <div class="vocab-card bg-gray" data-cat="veg"><span class="vocab-tag">蔬菜</span><div class="vocab-hanzi">辣椒</div><div class="vocab-pinyin">lua̍h-tsio</div></div>
+
+          <div class="vocab-card bg-coral" data-cat="veg"><span class="vocab-tag">蔬菜</span><div class="vocab-hanzi">菜椒</div><div class="vocab-pinyin">tshài-tsio</div></div>
+          <div class="vocab-card bg-teal" data-cat="veg"><span class="vocab-tag">蔬菜</span><div class="vocab-hanzi">小刺瓜</div><div class="vocab-pinyin">sió-tshì-kue</div></div>
+          <div class="vocab-card bg-gray" data-cat="veg"><span class="vocab-tag">蔬菜</span><div class="vocab-hanzi">番薯</div><div class="vocab-pinyin">an-tsîr</div></div>
+          <div class="vocab-card bg-purple" data-cat="veg"><span class="vocab-tag">蔬菜</span><div class="vocab-hanzi">蒜頭</div><div class="vocab-pinyin">sǹg-thâu</div></div>
+          <div class="vocab-card bg-coral" data-cat="veg"><span class="vocab-tag">蔬菜</span><div class="vocab-hanzi">荷仁豆</div><div class="vocab-pinyin">hû-lin-tāu</div></div>
+          <div class="vocab-card bg-purple" data-cat="veg"><span class="vocab-tag">蔬菜</span><div class="vocab-hanzi">茄</div><div class="vocab-pinyin">kiô</div></div>
+          <div class="vocab-card bg-teal" data-cat="veg"><span class="vocab-tag">蔬菜</span><div class="vocab-hanzi">金瓜</div><div class="vocab-pinyin">kim-kue</div></div>
+          <div class="vocab-card bg-teal" data-cat="veg"><span class="vocab-tag">蔬菜</span><div class="vocab-hanzi">苦瓜</div><div class="vocab-pinyin">khóo-kue</div></div>
+
+          <div class="vocab-card bg-gray" data-cat="veg"><span class="vocab-tag">蔬菜</span><div class="vocab-hanzi">菜頭</div><div class="vocab-pinyin">tshài-thâu</div></div>
+          <div class="vocab-card bg-gray" data-cat="veg"><span class="vocab-tag">蔬菜</span><div class="vocab-hanzi">芋</div><div class="vocab-pinyin">ōo</div></div>
+          <div class="vocab-card bg-coral" data-cat="veg"><span class="vocab-tag">蔬菜</span><div class="vocab-hanzi">苳蒿</div><div class="vocab-pinyin">tang-er</div></div>
+          <div class="vocab-card bg-teal" data-cat="veg"><span class="vocab-tag">蔬菜</span><div class="vocab-hanzi">角瓜</div><div class="vocab-pinyin">kak-kue</div></div>
+          <div class="vocab-card bg-coral" data-cat="veg"><span class="vocab-tag">蔬菜</span><div class="vocab-hanzi">菠薐</div><div class="vocab-pinyin">per-lîng</div></div>
+          <div class="vocab-card bg-purple" data-cat="veg"><span class="vocab-tag">蔬菜</span><div class="vocab-hanzi">薑</div><div class="vocab-pinyin">kiunn</div></div>
+          <div class="vocab-card bg-teal" data-cat="veg"><span class="vocab-tag">蔬菜</span><div class="vocab-hanzi">木耳</div><div class="vocab-pinyin">bo̍k-ní</div></div>
+          <div class="vocab-card bg-purple" data-cat="veg"><span class="vocab-tag">蔬菜</span><div class="vocab-hanzi">蘆黍</div><div class="vocab-pinyin">lôo-sué</div></div>
+
+          <div class="vocab-card bg-special" data-cat="special"><span class="vocab-tag">特殊牌 ×2</span><div class="vocab-hanzi">🧺 菜籃</div><div class="vocab-pinyin">tshài-nâ</div></div>
+          <div class="vocab-card bg-special" data-cat="special"><span class="vocab-tag">特殊牌 ×2</span><div class="vocab-hanzi">🧊 冰箱</div><div class="vocab-pinyin">ping-siunn</div></div>
+        </div>
+      </section>
+
+      <!-- 課堂四人小組計分板 -->
+      <section id="scoreboard" class="interactive-tool">
+        <h2 class="section-title">課堂四人小組計分板（互動工具）</h2>
+        <p style="margin-bottom: 12px;">適合四人一組遊玩純卡牌或底圖棋盤時，直接在平板或投影螢幕上計分：</p>
+
+        <div class="score-board">
+          <div class="player-card">
+            <h3>1號玩家</h3>
+            <div class="player-score" id="score1">0</div>
+            <button class="score-btn" onclick="updateScore(1, 1)">+1</button>
+            <button class="score-btn" onclick="updateScore(1, 3)">+3</button>
+            <button class="score-btn sub" onclick="updateScore(1, -1)">-1</button>
+          </div>
+          <div class="player-card">
+            <h3>2號玩家</h3>
+            <div class="player-score" id="score2">0</div>
+            <button class="score-btn" onclick="updateScore(2, 1)">+1</button>
+            <button class="score-btn" onclick="updateScore(2, 3)">+3</button>
+            <button class="score-btn sub" onclick="updateScore(2, -1)">-1</button>
+          </div>
+          <div class="player-card">
+            <h3>3號玩家</h3>
+            <div class="player-score" id="score3">0</div>
+            <button class="score-btn" onclick="updateScore(3, 1)">+1</button>
+            <button class="score-btn" onclick="updateScore(3, 3)">+3</button>
+            <button class="score-btn sub" onclick="updateScore(3, -1)">-1</button>
+          </div>
+          <div class="player-card">
+            <h3>4號玩家</h3>
+            <div class="player-score" id="score4">0</div>
+            <button class="score-btn" onclick="updateScore(4, 1)">+1</button>
+            <button class="score-btn" onclick="updateScore(4, 3)">+3</button>
+            <button class="score-btn sub" onclick="updateScore(4, -1)">-1</button>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: 18px;">
+          <button onclick="resetScores()" style="background: #666; color: white; border: none; padding: 8px 18px; border-radius: 4px; cursor: pointer;">🔄 重置所有分數</button>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('open');
+    }
+
+    let fontScale = 1;
+    function changeFontSize(delta) {
+      fontScale = Math.max(0.85, Math.min(1.4, fontScale + delta));
+      document.documentElement.style.setProperty('--font-scale', fontScale);
+    }
+
+    const scores = { 1: 0, 2: 0, 3: 0, 4: 0 };
+    function updateScore(player, delta) {
+      scores[player] = Math.max(0, scores[player] + delta);
+      document.getElementById('score' + player).innerText = scores[player];
+    }
+    function resetScores() {
+      for (let i = 1; i <= 4; i++) {
+        scores[i] = 0;
+        document.getElementById('score' + i).innerText = 0;
+      }
+    }
+
+    let currentCategory = 'all';
+    function setCategory(cat, btn) {
+      currentCategory = cat;
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      filterCards();
+    }
+
+    function filterCards() {
+      const keyword = document.getElementById('vocabSearch').value.toLowerCase();
+      const cards = document.querySelectorAll('.vocab-card');
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-cat');
+        const text = card.innerText.toLowerCase();
+        const matchCat = (currentCategory === 'all' || cat === currentCategory);
+        const matchText = text.includes(keyword);
+        card.style.display = (matchCat && matchText) ? '' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
